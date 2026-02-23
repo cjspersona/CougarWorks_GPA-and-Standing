@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+
+<h1>Student Dashboard</h1>
+
+<h2>{{ student.firstName }} {{ student.lastName }}</h2>
+<p><strong>GPA:</strong> {{ student.gpa }}</p>
+<p><strong>Academic Standing:</strong> {{ student.academicStanding }}</p>
+
+<h3>Add Grade</h3>
+<form action="/add_grade" method="POST">
+    Course ID: <input type="text" name="courseId"><br>
+    Credits: <input type="number" name="credits"><br>
+    Letter Grade: <input type="text" name="letterGrade"><br>
+    Grade Points: <input type="number" step="0.1" name="gradePoints"><br>
+    <button type="submit">Add Grade</button>
+</form>
+
+</body>
+</html>
